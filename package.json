@@ -1,0 +1,24 @@
+{
+  "name": "frontend-project-lvl1",
+  "version": "1.0.0",
+  "description": "training projekt Brain Games",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timursus/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "brain-games",
+    "project",
+    "learning"
+  ],
+  "author": "timursus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timursus/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/timursus/frontend-project-lvl1#readme"
+}
