@@ -1,8 +1,12 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "training projekt Brain Games",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "brain-games": "src/bin/brain-games.js"
+  },
   "scripts": {
     "test": "test"
   },
