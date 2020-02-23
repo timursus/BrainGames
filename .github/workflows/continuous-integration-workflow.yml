@@ -18,3 +18,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: make lint
+      env:
+          CI: true
