@@ -3,7 +3,7 @@ env:
   es6: true
   node: true
 extends:
-  - airbnb-base
+  - 'airbnb-base'
 parserOptions:
   ecmaVersion: 2018
   sourceType: module
