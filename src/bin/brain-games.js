@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import welcomeMessage from '../index.js';
+import { getName } from '../index.js';
 
-welcomeMessage();
+getName();
