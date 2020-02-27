@@ -13,3 +13,9 @@ $ make install
 ```sh
 $ make start
 ```
+
+### Brain Even
+[![brain-even](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv.svg)](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv)
+
+### Brain Calc
+[![brain-calc](https://asciinema.org/a/hcyhwNRCgUZPk1cEquO13Iu1G.svg)](https://asciinema.org/a/hcyhwNRCgUZPk1cEquO13Iu1G)
