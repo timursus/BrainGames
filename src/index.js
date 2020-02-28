@@ -7,13 +7,11 @@ export const getName = () => {
   return name;
 };
 
-const name = getName();
-
-export const getRandomInt = (max) => Math.floor(Math.random() * max);
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 export const numberOfRounds = 3;
 
-export const getAnswer = (question, correctAnswer) => {
+export const getAnswer = (name, question, correctAnswer) => {
   const answer = readlineSync.question(`\nQuestion: ${question} \nYour answer: `);
   if (answer === correctAnswer.toString()) {
     console.log('Correct!');
@@ -23,4 +21,4 @@ export const getAnswer = (question, correctAnswer) => {
   return answer;
 };
 
-export const congratsSuccess = () => console.log(`Congratulations, ${name}!`);
+export const congratsSuccess = (name) => console.log(`Congratulations, ${name}!`);

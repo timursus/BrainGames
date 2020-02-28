@@ -1,20 +1,24 @@
 import {
+  getName,
   getAnswer,
   numberOfRounds,
   getRandomInt,
   congratsSuccess,
 } from '../index.js';
 
+const isEven = (num) => num % 2 === 0;
+
 export default () => {
+  const name = getName();
   const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
   console.log(gameTask);
 
   for (let i = 0; i < numberOfRounds; i += 1) {
-    const number = getRandomInt(100);
-    const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
-    const answer = getAnswer(number, correctAnswer);
+    const number = getRandomInt(0, 100);
+    const correctAnswer = isEven(number) ? 'yes' : 'no';
+    const answer = getAnswer(name, number, correctAnswer);
     if (answer !== correctAnswer) return;
   }
 
-  congratsSuccess();
+  congratsSuccess(name);
 };
