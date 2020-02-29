@@ -15,10 +15,13 @@ $ make start
 ```
 
 ### Brain Even game
-[![brain-even](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv.svg)](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv)
+[![even-asciicast](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv.svg)](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv)
 
 ### Brain Calc game
-[![brain-calc](https://asciinema.org/a/hcyhwNRCgUZPk1cEquO13Iu1G.svg)](https://asciinema.org/a/hcyhwNRCgUZPk1cEquO13Iu1G)
+[![calc-asciicast](https://asciinema.org/a/hcyhwNRCgUZPk1cEquO13Iu1G.svg)](https://asciinema.org/a/hcyhwNRCgUZPk1cEquO13Iu1G)
 
 ### Brain Greatest Common Divisor game
-[![asciicast](https://asciinema.org/a/KFU3OsT7WN5JjW5XDdOR26Beo.svg)](https://asciinema.org/a/KFU3OsT7WN5JjW5XDdOR26Beo)
+[![gcd-asciicast](https://asciinema.org/a/KFU3OsT7WN5JjW5XDdOR26Beo.svg)](https://asciinema.org/a/KFU3OsT7WN5JjW5XDdOR26Beo)
+
+### Brain Progression game
+[![progression-asciicast](https://asciinema.org/a/t4XXp8S2xOi20v6vqpRciD8AK.svg)](https://asciinema.org/a/t4XXp8S2xOi20v6vqpRciD8AK)
