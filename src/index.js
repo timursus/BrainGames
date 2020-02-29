@@ -12,7 +12,8 @@ const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min)
 const numberOfRounds = 3;
 
 const getAnswer = (name, question, correctAnswer) => {
-  const answer = readlineSync.question(`\nQuestion: ${question} \nYour answer: `);
+  console.log(`\nQuestion: ${question}`);
+  const answer = readlineSync.question('Your answer: ');
   if (answer === correctAnswer.toString()) {
     console.log('Correct!');
   } else {

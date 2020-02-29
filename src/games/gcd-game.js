@@ -7,14 +7,13 @@ import {
 } from '../index.js';
 
 const findGCD = (num1, num2) => {
-  let GCD = 1;
   const smallerNum = Math.min(num1, num2);
-  for (let divisor = 2; divisor <= smallerNum; divisor += 1) {
+  for (let divisor = smallerNum; divisor >= 2; divisor -= 1) {
     if (num1 % divisor === 0 && num2 % divisor === 0) {
-      GCD = divisor;
+      return divisor;
     }
   }
-  return GCD;
+  return 1;
 };
 
 export default () => {

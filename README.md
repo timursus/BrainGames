@@ -2,6 +2,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/596d7302d0fa53f61ae1/maintainability)](https://codeclimate.com/github/timursus/frontend-project-lvl1/maintainability)
 [![Workflow](https://github.com/timursus/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/timursus/frontend-project-lvl1/actions)
 
+A Set of intellectual mini-games __(starts from the console)__.
+
 ## Setup
 
 ```sh
@@ -11,7 +13,11 @@ $ make install
 ## Play
 
 ```sh
-$ make start
+$ brain-even
+$ brain-calc
+$ brain-gcd
+$ brain-progression
+$ brain-prime
 ```
 
 ### Brain Even game
@@ -25,3 +31,6 @@ $ make start
 
 ### Brain Progression game
 [![progression-asciicast](https://asciinema.org/a/t4XXp8S2xOi20v6vqpRciD8AK.svg)](https://asciinema.org/a/t4XXp8S2xOi20v6vqpRciD8AK)
+
+### Brain Prime game
+[![prime-asciicast](https://asciinema.org/a/LvE5nKqkxSzUjMb8YOtDERf3r.svg)](https://asciinema.org/a/LvE5nKqkxSzUjMb8YOtDERf3r)
