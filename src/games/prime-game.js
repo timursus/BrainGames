@@ -17,8 +17,7 @@ const isPrime = (num) => {
 
 export default () => {
   const name = getName();
-  const numberProperty = 'prime';
-  displayTheTask(numberProperty);
+  displayTheTask('prime');
 
   for (let i = 0; i < numberOfRounds; i += 1) {
     const number = getRandomInt(2, 50);

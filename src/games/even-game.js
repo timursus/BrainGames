@@ -11,8 +11,7 @@ const isEven = (num) => num % 2 === 0;
 
 export default () => {
   const name = getName();
-  const numberProperty = 'even';
-  displayTheTask(numberProperty);
+  displayTheTask('even');
 
   for (let i = 0; i < numberOfRounds; i += 1) {
     const number = getRandomInt(0, 100);
