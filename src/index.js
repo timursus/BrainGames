@@ -7,6 +7,8 @@ const getName = () => {
   return name;
 };
 
+const displayTheTask = (numberProperty) => console.log(`Answer "yes" if the given number is ${numberProperty}, otherwise answer "no".`);
+
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 const numberOfRounds = 3;
@@ -27,6 +29,7 @@ const congratsSuccess = (name) => console.log(`Congratulations, ${name}!`);
 export {
   getName,
   getAnswer,
+  displayTheTask,
   numberOfRounds,
   getRandomInt,
   congratsSuccess,

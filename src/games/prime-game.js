@@ -1,6 +1,7 @@
 import {
   getName,
   getAnswer,
+  displayTheTask,
   numberOfRounds,
   getRandomInt,
   congratsSuccess,
@@ -16,8 +17,8 @@ const isPrime = (num) => {
 
 export default () => {
   const name = getName();
-  const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  console.log(gameTask);
+  const numberProperty = 'prime';
+  displayTheTask(numberProperty);
 
   for (let i = 0; i < numberOfRounds; i += 1) {
     const number = getRandomInt(2, 50);

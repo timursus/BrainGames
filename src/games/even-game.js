@@ -1,6 +1,7 @@
 import {
   getName,
   getAnswer,
+  displayTheTask,
   numberOfRounds,
   getRandomInt,
   congratsSuccess,
@@ -10,8 +11,8 @@ const isEven = (num) => num % 2 === 0;
 
 export default () => {
   const name = getName();
-  const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
-  console.log(gameTask);
+  const numberProperty = 'even';
+  displayTheTask(numberProperty);
 
   for (let i = 0; i < numberOfRounds; i += 1) {
     const number = getRandomInt(0, 100);
