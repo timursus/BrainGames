@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import isPrimeGame from '../games/prime-game.js';
+import gameEngine from '../index.js';
+import getGameData from '../games/prime-game.js';
 
-isPrimeGame();
+const gameData = getGameData();
+gameEngine(gameData);

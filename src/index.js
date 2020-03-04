@@ -1,36 +1,31 @@
 import readlineSync from 'readline-sync';
 
-const getName = () => {
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+export const numOfRounds = 3;
+
+const gameEngine = (gameData) => {
+  // gameData structure: [gameTask, question0, answer0, question1, answer1, ...]
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
-  return name;
-};
 
-const displayTheTask = (numberProperty) => console.log(`Answer "yes" if the given number is ${numberProperty}, otherwise answer "no".`);
+  const gameTask = gameData.shift();
+  console.log(gameTask);
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
-
-const numberOfRounds = 3;
-
-const getAnswer = (name, question, correctAnswer) => {
-  console.log(`\nQuestion: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === correctAnswer.toString()) {
-    console.log('Correct!');
-  } else {
-    console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${name}!`);
+  for (let roundCount = 0; roundCount < numOfRounds; roundCount += 1) {
+    const question = gameData.shift();
+    const correctAnswer = gameData.shift();
+    console.log(`\nQuestion: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer === correctAnswer.toString()) {
+      console.log('Correct!');
+    } else {
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${name}!`);
+      return;
+    }
   }
-  return answer;
+
+  console.log(`Congratulations, ${name}!`);
 };
 
-const congratsSuccess = (name) => console.log(`Congratulations, ${name}!`);
-
-export {
-  getName,
-  getAnswer,
-  displayTheTask,
-  numberOfRounds,
-  getRandomInt,
-  congratsSuccess,
-};
+export default gameEngine;

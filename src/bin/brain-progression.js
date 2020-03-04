@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import progressionGame from '../games/progression-game.js';
+import gameEngine from '../index.js';
+import getGameData from '../games/progression-game.js';
 
-progressionGame();
+const gameData = getGameData();
+gameEngine(gameData);

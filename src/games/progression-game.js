@@ -1,10 +1,4 @@
-import {
-  getName,
-  getAnswer,
-  numberOfRounds,
-  getRandomInt,
-  congratsSuccess,
-} from '../index.js';
+import { getRandomInt, numOfRounds } from '../index.js';
 
 const generateProgression = () => {
   const progression = [];
@@ -19,19 +13,18 @@ const generateProgression = () => {
 };
 
 export default () => {
-  const name = getName();
   const gameTask = 'What number is missing in the progression?';
-  console.log(gameTask);
+  const gameData = [];
+  gameData.push(gameTask);
 
-  for (let i = 0; i < numberOfRounds; i += 1) {
+  for (let i = 0; i < numOfRounds; i += 1) {
     const progression = generateProgression();
     const hiddenIndex = getRandomInt(1, 9);
     const hiddenElement = progression[hiddenIndex];
     progression[hiddenIndex] = '..';
     const progressionString = progression.join(' ');
-    const answer = getAnswer(name, progressionString, hiddenElement);
-    if (Number(answer) !== hiddenElement) return;
+    gameData.push(progressionString, hiddenElement);
   }
 
-  congratsSuccess(name);
+  return gameData;
 };

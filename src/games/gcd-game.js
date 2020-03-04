@@ -1,10 +1,4 @@
-import {
-  getName,
-  getAnswer,
-  numberOfRounds,
-  getRandomInt,
-  congratsSuccess,
-} from '../index.js';
+import { getRandomInt, numOfRounds } from '../index.js';
 
 const findGCD = (num1, num2) => {
   const smallerNum = Math.min(num1, num2);
@@ -17,18 +11,17 @@ const findGCD = (num1, num2) => {
 };
 
 export default () => {
-  const name = getName();
   const gameTask = 'Find the greatest common divisor of given numbers.';
-  console.log(gameTask);
+  const gameData = [];
+  gameData.push(gameTask);
 
-  for (let i = 0; i < numberOfRounds; i += 1) {
+  for (let i = 0; i < numOfRounds; i += 1) {
     const number1 = getRandomInt(0, 51);
     const number2 = getRandomInt(1, 51);
-    const correctAnswer = findGCD(number1, number2);
     const pairOfNumbers = `${number1} ${number2}`;
-    const answer = getAnswer(name, pairOfNumbers, correctAnswer);
-    if (Number(answer) !== correctAnswer) return;
+    const answer = findGCD(number1, number2);
+    gameData.push(pairOfNumbers, answer);
   }
 
-  congratsSuccess(name);
+  return gameData;
 };

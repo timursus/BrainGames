@@ -1,11 +1,4 @@
-import {
-  getName,
-  getAnswer,
-  displayTheTask,
-  numberOfRounds,
-  getRandomInt,
-  congratsSuccess,
-} from '../index.js';
+import { getRandomInt, numOfRounds } from '../index.js';
 
 const isPrime = (num) => {
   const half = num / 2;
@@ -16,15 +9,15 @@ const isPrime = (num) => {
 };
 
 export default () => {
-  const name = getName();
-  displayTheTask('prime');
+  const gameTask = 'Answer "yes" if the given number is prime, otherwise answer "no".';
+  const gameData = [];
+  gameData.push(gameTask);
 
-  for (let i = 0; i < numberOfRounds; i += 1) {
-    const number = getRandomInt(2, 50);
-    const correctAnswer = isPrime(number) ? 'yes' : 'no';
-    const answer = getAnswer(name, number, correctAnswer);
-    if (answer !== correctAnswer) return;
+  for (let i = 0; i < numOfRounds; i += 1) {
+    const questionNum = getRandomInt(2, 50);
+    const answer = isPrime(questionNum) ? 'yes' : 'no';
+    gameData.push(questionNum, answer);
   }
 
-  congratsSuccess(name);
+  return gameData;
 };

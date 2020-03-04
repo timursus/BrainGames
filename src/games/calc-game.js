@@ -1,10 +1,4 @@
-import {
-  getName,
-  getAnswer,
-  numberOfRounds,
-  getRandomInt,
-  congratsSuccess,
-} from '../index.js';
+import { getRandomInt, numOfRounds } from '../index.js';
 
 const calculateAnswer = (operand1, operation, operand2) => {
   switch (operation) {
@@ -20,20 +14,19 @@ const calculateAnswer = (operand1, operation, operand2) => {
 };
 
 export default () => {
-  const name = getName();
   const gameTask = 'What is the result of the expression?';
-  console.log(gameTask);
+  const gameData = [];
+  gameData.push(gameTask);
   const operationOptions = ['+', '-', '*'];
 
-  for (let i = 0; i < numberOfRounds; i += 1) {
+  for (let i = 0; i < numOfRounds; i += 1) {
     const operand1 = getRandomInt(0, 31);
     const operand2 = getRandomInt(0, 31);
     const operation = operationOptions[getRandomInt(0, 3)];
     const expression = `${operand1} ${operation} ${operand2}`;
-    const correctAnswer = calculateAnswer(operand1, operation, operand2);
-    const answer = getAnswer(name, expression, correctAnswer);
-    if (Number(answer) !== correctAnswer) return;
+    const answer = calculateAnswer(operand1, operation, operand2);
+    gameData.push(expression, answer);
   }
 
-  congratsSuccess(name);
+  return gameData;
 };

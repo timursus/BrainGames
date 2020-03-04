@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import isEvenGame from '../games/even-game.js';
+import gameEngine from '../index.js';
+import getGameData from '../games/even-game.js';
 
-isEvenGame();
+const gameData = getGameData();
+gameEngine(gameData);

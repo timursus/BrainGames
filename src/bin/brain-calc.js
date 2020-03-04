@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import calculationsGame from '../games/calc-game.js';
+import gameEngine from '../index.js';
+import getGameData from '../games/calc-game.js';
 
-calculationsGame();
+const gameData = getGameData();
+gameEngine(gameData);
