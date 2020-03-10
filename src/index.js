@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 export const numOfRounds = 3;
 
 const gameEngine = (gameData) => {
@@ -17,7 +16,7 @@ const gameEngine = (gameData) => {
     const correctAnswer = gameData.shift();
     console.log(`\nQuestion: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnswer.toString()) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${name}!`);

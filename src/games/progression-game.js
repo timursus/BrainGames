@@ -1,10 +1,13 @@
-import { getRandomInt, numOfRounds } from '../index.js';
+import gameEngine, { numOfRounds } from '../index.js';
+import getRandomInt from '../randomizer.js';
+
+const gameTask = 'What number is missing in the progression?';
 
 const generateProgression = () => {
   const progression = [];
   const progressionLength = 10;
-  const initialNum = getRandomInt(0, 21);
-  const difference = getRandomInt(1, 9);
+  const initialNum = getRandomInt(21);
+  const difference = getRandomInt(9, 1);
   for (let i = 0; i < progressionLength; i += 1) {
     const currentElement = initialNum + (difference * i);
     progression.push(currentElement);
@@ -13,18 +16,17 @@ const generateProgression = () => {
 };
 
 export default () => {
-  const gameTask = 'What number is missing in the progression?';
   const gameData = [];
   gameData.push(gameTask);
 
   for (let i = 0; i < numOfRounds; i += 1) {
     const progression = generateProgression();
-    const hiddenIndex = getRandomInt(1, 9);
-    const hiddenElement = progression[hiddenIndex];
+    const hiddenIndex = getRandomInt(9, 1);
+    const answer = progression[hiddenIndex];
     progression[hiddenIndex] = '..';
-    const progressionString = progression.join(' ');
-    gameData.push(progressionString, hiddenElement);
+    const questionProgression = progression.join(' ');
+    gameData.push(questionProgression, answer.toString());
   }
 
-  return gameData;
+  gameEngine(gameData);
 };

@@ -1,4 +1,7 @@
-import { getRandomInt, numOfRounds } from '../index.js';
+import gameEngine, { numOfRounds } from '../index.js';
+import getRandomInt from '../randomizer.js';
+
+const gameTask = 'Answer "yes" if the given number is prime, otherwise answer "no".';
 
 const isPrime = (num) => {
   const half = num / 2;
@@ -9,15 +12,14 @@ const isPrime = (num) => {
 };
 
 export default () => {
-  const gameTask = 'Answer "yes" if the given number is prime, otherwise answer "no".';
   const gameData = [];
   gameData.push(gameTask);
 
   for (let i = 0; i < numOfRounds; i += 1) {
-    const questionNum = getRandomInt(2, 50);
+    const questionNum = getRandomInt(50, 2);
     const answer = isPrime(questionNum) ? 'yes' : 'no';
     gameData.push(questionNum, answer);
   }
 
-  return gameData;
+  gameEngine(gameData);
 };
