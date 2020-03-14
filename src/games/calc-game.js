@@ -18,18 +18,17 @@ const calculateAnswer = (operand1, operation, operand2) => {
 
 export default () => {
   const gameData = [];
-  gameData.push(gameTask);
-  const operationOptions = ['+', '-', '*'];
-  const numOfOptions = operationOptions.length;
+  const operations = ['+', '-', '*'];
+  const numOfOperations = operations.length;
 
   for (let i = 0; i < numOfRounds; i += 1) {
-    const operand1 = getRandomInt(31);
-    const operand2 = getRandomInt(31);
-    const operation = operationOptions[getRandomInt(numOfOptions)];
-    const expression = `${operand1} ${operation} ${operand2}`;
+    const operand1 = getRandomInt(0, 31);
+    const operand2 = getRandomInt(0, 31);
+    const operation = operations[getRandomInt(0, numOfOperations)];
+    const question = `${operand1} ${operation} ${operand2}`;
     const answer = calculateAnswer(operand1, operation, operand2);
-    gameData.push(expression, answer.toString());
+    gameData.push(question, answer.toString());
   }
 
-  gameEngine(gameData);
+  gameEngine(gameTask, gameData);
 };

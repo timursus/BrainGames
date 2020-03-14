@@ -13,13 +13,12 @@ const isPrime = (num) => {
 
 export default () => {
   const gameData = [];
-  gameData.push(gameTask);
 
   for (let i = 0; i < numOfRounds; i += 1) {
-    const questionNum = getRandomInt(50, 2);
-    const answer = isPrime(questionNum) ? 'yes' : 'no';
-    gameData.push(questionNum, answer);
+    const question = getRandomInt(2, 50);
+    const answer = isPrime(question) ? 'yes' : 'no';
+    gameData.push(question, answer);
   }
 
-  gameEngine(gameData);
+  gameEngine(gameTask, gameData);
 };

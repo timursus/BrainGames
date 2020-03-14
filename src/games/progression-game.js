@@ -2,14 +2,12 @@ import gameEngine, { numOfRounds } from '../index.js';
 import getRandomInt from '../randomizer.js';
 
 const gameTask = 'What number is missing in the progression?';
+const progrSize = 10;
 
-const generateProgression = () => {
+const generateProgression = (size, initialElement, difference) => {
   const progression = [];
-  const progressionLength = 10;
-  const initialNum = getRandomInt(21);
-  const difference = getRandomInt(9, 1);
-  for (let i = 0; i < progressionLength; i += 1) {
-    const currentElement = initialNum + (difference * i);
+  for (let i = 0; i < size; i += 1) {
+    const currentElement = initialElement + (difference * i);
     progression.push(currentElement);
   }
   return progression;
@@ -17,16 +15,17 @@ const generateProgression = () => {
 
 export default () => {
   const gameData = [];
-  gameData.push(gameTask);
 
   for (let i = 0; i < numOfRounds; i += 1) {
-    const progression = generateProgression();
-    const hiddenIndex = getRandomInt(9, 1);
+    const initial = getRandomInt(0, 31);
+    const difference = getRandomInt(1, 11);
+    const progression = generateProgression(progrSize, initial, difference);
+    const hiddenIndex = getRandomInt(1, progrSize - 1);
     const answer = progression[hiddenIndex];
     progression[hiddenIndex] = '..';
-    const questionProgression = progression.join(' ');
-    gameData.push(questionProgression, answer.toString());
+    const question = progression.join(' ');
+    gameData.push(question, answer.toString());
   }
 
-  gameEngine(gameData);
+  gameEngine(gameTask, gameData);
 };

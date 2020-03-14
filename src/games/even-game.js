@@ -7,13 +7,12 @@ const isEven = (num) => num % 2 === 0;
 
 export default () => {
   const gameData = [];
-  gameData.push(gameTask);
 
   for (let i = 0; i < numOfRounds; i += 1) {
-    const questionNum = getRandomInt(100);
-    const answer = isEven(questionNum) ? 'yes' : 'no';
-    gameData.push(questionNum, answer);
+    const question = getRandomInt(0, 100);
+    const answer = isEven(question) ? 'yes' : 'no';
+    gameData.push(question, answer);
   }
 
-  gameEngine(gameData);
+  gameEngine(gameTask, gameData);
 };
