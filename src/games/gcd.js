@@ -17,8 +17,8 @@ export default () => {
   const gameData = [];
 
   for (let i = 0; i < numOfRounds; i += 1) {
-    const number1 = getRandomInt(0, 51);
-    const number2 = getRandomInt(1, 51);
+    const number1 = getRandomInt(0, 50);
+    const number2 = getRandomInt(1, 50);
     const question = `${number1} ${number2}`;
     const answer = findGCD(number1, number2);
     gameData.push([question, answer.toString()]);

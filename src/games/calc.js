@@ -22,9 +22,9 @@ export default () => {
   const numOfOperations = operations.length;
 
   for (let i = 0; i < numOfRounds; i += 1) {
-    const operand1 = getRandomInt(0, 31);
-    const operand2 = getRandomInt(0, 31);
-    const operation = operations[getRandomInt(0, numOfOperations)];
+    const operand1 = getRandomInt(0, 30);
+    const operand2 = getRandomInt(0, 30);
+    const operation = operations[getRandomInt(0, numOfOperations - 1)];
     const question = `${operand1} ${operation} ${operand2}`;
     const answer = calculateAnswer(operand1, operation, operand2);
     gameData.push([question, answer.toString()]);
