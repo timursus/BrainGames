@@ -21,7 +21,7 @@ export default () => {
     const number2 = getRandomInt(1, 51);
     const question = `${number1} ${number2}`;
     const answer = findGCD(number1, number2);
-    gameData.push(question, answer.toString());
+    gameData.push([question, answer.toString()]);
   }
 
   gameEngine(gameTask, gameData);

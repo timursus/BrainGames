@@ -17,7 +17,7 @@ export default () => {
   for (let i = 0; i < numOfRounds; i += 1) {
     const question = getRandomInt(2, 50);
     const answer = isPrime(question) ? 'yes' : 'no';
-    gameData.push(question, answer);
+    gameData.push([question, answer]);
   }
 
   gameEngine(gameTask, gameData);

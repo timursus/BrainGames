@@ -11,7 +11,7 @@ export default () => {
   for (let i = 0; i < numOfRounds; i += 1) {
     const question = getRandomInt(0, 100);
     const answer = isEven(question) ? 'yes' : 'no';
-    gameData.push(question, answer);
+    gameData.push([question, answer]);
   }
 
   gameEngine(gameTask, gameData);

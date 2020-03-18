@@ -24,7 +24,7 @@ export default () => {
     const answer = progression[hiddenIndex];
     progression[hiddenIndex] = '..';
     const question = progression.join(' ');
-    gameData.push(question, answer.toString());
+    gameData.push([question, answer.toString()]);
   }
 
   gameEngine(gameTask, gameData);

@@ -27,7 +27,7 @@ export default () => {
     const operation = operations[getRandomInt(0, numOfOperations)];
     const question = `${operand1} ${operation} ${operand2}`;
     const answer = calculateAnswer(operand1, operation, operand2);
-    gameData.push(question, answer.toString());
+    gameData.push([question, answer.toString()]);
   }
 
   gameEngine(gameTask, gameData);
