@@ -10,8 +10,7 @@ const gameEngine = (gameTask, gameData) => {
   console.log(gameTask);
 
   for (let roundCount = 0; roundCount < numOfRounds; roundCount += 1) {
-    const question = gameData[roundCount][0];
-    const correctAnswer = gameData[roundCount][1];
+    const [question, correctAnswer] = gameData[roundCount];
 
     console.log(`\nQuestion: ${question}`);
     const answer = readlineSync.question('Your answer: ');
