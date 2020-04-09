@@ -3,7 +3,7 @@ import getRandomInt from '../randomizer.js';
 
 const gameTask = 'What is the result of the expression?';
 
-const calculateAnswer = (operand1, operation, operand2) => {
+const calculate = (operation, operand1, operand2) => {
   switch (operation) {
     case '+':
       return operand1 + operand2;
@@ -26,7 +26,7 @@ export default () => {
     const operand2 = getRandomInt(0, 30);
     const operation = operations[getRandomInt(0, numOfOperations - 1)];
     const question = `${operand1} ${operation} ${operand2}`;
-    const answer = calculateAnswer(operand1, operation, operand2);
+    const answer = calculate(operation, operand1, operand2);
     gameData.push([question, answer.toString()]);
   }
 
