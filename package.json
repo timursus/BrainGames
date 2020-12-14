@@ -1,7 +1,7 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "@timursus/brain-games",
   "version": "1.0.0",
-  "description": "training projekt Brain Games",
+  "description": "Set of intellectual cli-games",
   "type": "module",
   "main": "src/index.js",
   "bin": {
@@ -11,8 +11,8 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "scripts": {
-    "test": "test"
+  "engines": {
+    "node": ">= 13"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,10 @@
   },
   "keywords": [
     "brain-games",
-    "project",
-    "learning"
+    "hexlet-project",
+    "cli-game"
   ],
-  "author": "timursus",
+  "author": "Timur Akhmetov <redundant09@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/timursus/frontend-project-lvl1/issues"
@@ -33,8 +33,8 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1"
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }

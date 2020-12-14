@@ -2,26 +2,36 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/596d7302d0fa53f61ae1/maintainability)](https://codeclimate.com/github/timursus/frontend-project-lvl1/maintainability)
 [![Workflow](https://github.com/timursus/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/timursus/frontend-project-lvl1/actions)
 
-### JS training project for hexlet.io (lvl1)
-
-A Set of intellectual mini-games.
+A Set of brain training cli-games. Each game consists of three questions. To win, the player must give the correct answers to each of them.
 
 ## Setup
-
 ```sh
-$ make install
+$ npm install -g @timursus/brain-games
 ```
 
-## Play
-
+## How to play
+### Сalculate the result of an arithmetic expression
+```sh
+$ brain-calc
+```
+### Answer if the given number is even, or not
 ```sh
 $ brain-even
-$ brain-calc
-$ brain-gcd
+```
+### Find the missing number in the sequence
+```sh
 $ brain-progression
+```
+### Answer if the given number is prime, or not
+```sh
 $ brain-prime
 ```
+### Find the greatest common divisor of given numbers
+```sh
+$ brain-gcd
+```
 
+## Demos
 ### Brain Even game
 [![even-asciicast](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv.svg)](https://asciinema.org/a/J1tUXXVE58NfQytKvSNUhJTEv)
 

@@ -2,7 +2,7 @@ install:
 		npm install
 
 publish:
-		npm publish --dry-run
+		npm publish
 
 lint:
 		npx eslint .
